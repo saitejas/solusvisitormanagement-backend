@@ -9,23 +9,21 @@ export const MeetingSchema = new mongoose.Schema({
   bloodGroup: String,
   visitorStatus: String,
   meetingStatus: String,
-  fromDateTime: Date,
-  toDateTime: Date,
+  fromDateTime: Number,
+  toDateTime: Number,
   toMeet: String,
 });
 
-export class Meeting {
-  constructor(
-    public visitorType: string,
-    public visitorName: string,
-    public mobileNumber: number,
-    public emailId: string,
-    public gender: string,
-    public bloodGroup: string,
-    public visitorStatus: string,
-    public meetingStatus: string,
-    public toMeet: string,
-    public fromDateTime: Date,
-    public toDateTime: Date,
-  ) {}
+export interface Meeting extends mongoose.Document {
+  visitorType: string;
+  visitorName: string;
+  mobileNumber: number;
+  emailId: string;
+  gender: string;
+  bloodGroup: string;
+  visitorStatus: string;
+  meetingStatus: string;
+  toMeet: string;
+  fromDateTime: number;
+  toDateTime: number;
 }

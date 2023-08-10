@@ -1,4 +1,4 @@
-import { IsDate, IsNotEmpty, IsNumber, IsString } from 'class-validator';
+import { IsNotEmpty, IsNumber, IsString } from 'class-validator';
 
 export class MeetingDTO {
   @IsNotEmpty()
@@ -38,10 +38,10 @@ export class MeetingDTO {
   toMeet: string;
 
   @IsNotEmpty()
-  @IsDate()
-  fromDateTime: Date;
+  @IsNumber()
+  fromDateTime: number;
 
   @IsNotEmpty()
-  @IsDate()
-  toDateTime: Date;
+  @IsNumber()
+  toDateTime: number;
 }
