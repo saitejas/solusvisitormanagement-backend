@@ -57,6 +57,8 @@ export class MeetingsService {
       meetingToBeUpdated.visitorType = updateMeetingObj.visitorType;
       meetingToBeUpdated.emailId = updateMeetingObj.emailId;
       meetingToBeUpdated.gender = updateMeetingObj.gender;
+      meetingToBeUpdated.bloodGroup = updateMeetingObj.bloodGroup;
+      meetingToBeUpdated.toMeet = updateMeetingObj.toMeet;
 
       meetingToBeUpdated.save();
       return {
